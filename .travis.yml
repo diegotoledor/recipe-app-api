@@ -1,6 +1,13 @@
 language: python
-python:
-  -"3.6"
+python: 
+  - "3.6"
+
+matrix:
+  include:
+    python:
+      -"3.6"
+      dist: xenial
+      sude: true
 
 services:
   -docker
