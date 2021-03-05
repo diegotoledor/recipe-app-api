@@ -1,18 +1,11 @@
 language: python
-python: 
-  -"3.6"
-  -"3.7"
-
-matrix:
-  include:
-    - python: 3.6
-      dist: xenial
-      sude: true
+python:
+  - "3.6"
 
 services:
-  -docker
+  - docker
 
 before_script: pip install docker-compose
 
 script:
-  -docker-compose run app sh -c "python manage.py test && flake8"
+  - docker-compose run app sh -c "python manage.py test && flake8"
